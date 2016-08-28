@@ -1,0 +1,61 @@
+﻿@model MyFirstWebsite.Models.StokPengecers
+@{
+    ViewBag.Title = "UpdateStok";
+}
+
+<h2>UpdateStok</h2>
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    <table>
+        <thead>
+            <tr>
+
+                @*<th style="text-align: center;">ID Assignment</th>*@
+                <th style="text-align: center;">ID Pengecer</th>
+                <th style="text-align: center;">UREA</th>
+                <th style="text-align: center;">NPK</th>
+                <th style="text-align: center;">ZA</th>
+                <th style="text-align: center;">SP36</th>
+                <th style="text-align: center;">ORGANIK</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                @*<td>@Html.DropDownListFor(u => u.Id_Ass,new SelectList (ViewBag.Assigns,"Id_ass","Kode_Pengecer"), "Select...")</td>*@
+                @*<td>@Html.DropDownListFor(u => u.Id_Ass, ViewData["DataAssign"] as SelectList)</td>*@
+                @*<td>@Html.DropDownListFor(u => u.Id_Ass, (SelectList)ViewBag.Assigns, new { @class = "form-control" })<br /></td>*@
+                @*<td>@Html.DropDownListFor(u => u.Id_Ass, Model.Id_assList, "--please select--")</td>*@
+                <td>@Html.TextBoxFor(u => u.Urea)</td>
+                <td>@Html.TextBoxFor(u => u.NPK)</td>
+                <td>@Html.TextBoxFor(u => u.ZA)</td>
+                <td>@Html.TextBoxFor(u => u.SP36)</td>
+                <td>@Html.TextBoxFor(u => u.Organik)</td>
+            </tr>
+     </tbody>
+    </table>
+            @*@model IEnumerable<MyFirstWebsite.Models.Assigns>*@
+            @*@foreach (var item in Model) { 
+            <tr>
+                <td>@Html.DisplayFor(u => item.Id_ass) </td>
+                <td>@Html.DisplayFor(u => item.Kode_Pengecer) </td>
+                <td>@Html.DisplayFor(u => item.Urea) </td>
+                <td>@Html.DisplayFor(u => item.NPK) </td>
+                <td>@Html.DisplayFor(u => item.ZA) </td>
+                <td>@Html.DisplayFor(u => item.SP36) </td>
+                <td>@Html.DisplayFor(u => item.Organik) </td>
+                @*<td>@Html.TextBoxFor(u => u.Urea)</td>
+                <td>@Html.TextBoxFor(u => u.NPK)</td>
+                <td>@Html.TextBoxFor(u => u.ZA)</td>
+                <td>@Html.TextBoxFor(u => u.SP36)</td>
+                <td>@Html.TextBoxFor(u => u.Organik)</td>
+            </tr>
+            }*@
+       
+    <br />
+    <button type="submit">Update</button>
+
+}
+
+

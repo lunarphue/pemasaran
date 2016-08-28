@@ -1,0 +1,82 @@
+﻿@model MyFirstWebsite.Models.StokDistributors
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>StokDistributor</h4>
+	<hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Date_Edited)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Date_Edited)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time_Edited)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time_Edited)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Urea)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Urea)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NPK)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NPK)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SP36)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SP36)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ZA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ZA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organik)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organik)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DistributorAssigns.Aktif)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DistributorAssigns.Aktif)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id_Trans }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

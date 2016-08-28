@@ -1,0 +1,36 @@
+﻿@model MyFirstWebsite.Models.Pengecers
+@{
+    ViewBag.Title = "RegistrationPengecer";
+}
+
+<h2>Registrasi Pengecer</h2>
+
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    
+    @Html.LabelFor(u => u.Kode_Pengecer)<br />
+    @Html.TextBoxFor(u => u.Kode_Pengecer)<br />
+    @Html.LabelFor(u => u.Name)<br />
+    @Html.TextBoxFor(u => u.Name)<br />
+    @Html.LabelFor(u => u.Alamat)<br />
+    @Html.TextBoxFor(u => u.Alamat)<br />
+    @Html.LabelFor(u => u.Kecamatan)<br />
+    @Html.TextBoxFor(u => u.Kecamatan)<br />
+    @Html.LabelFor(u => u.Telpon)<br />
+    @Html.TextBoxFor(u => u.Telpon)<br />
+    @Html.LabelFor(u => u.Faks)<br />
+    @Html.TextBoxFor(u => u.Faks)<br />
+    @Html.LabelFor(u => u.NPWP)<br />
+    @Html.TextBoxFor(u => u.NPWP)<br />
+    @Html.LabelFor(u => u.Aktif) <br/>
+    @Html.DropDownListFor(u => u.Aktif, new SelectList(
+                  new List<Object>{
+                       new { value = "A1" , text = "Aktif"  },
+                       new { value = "A2" , text = "Non Aktif" }
+                    }, "value", "text", 2))
+        <button type="submit">Register</button>
+    
+}
+

@@ -1,0 +1,56 @@
+﻿@model MyFirstWebsite.Models.Users
+@{
+    ViewBag.Title = "Registration";
+}
+
+<h2>Registration</h2>
+
+
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    @Html.LabelFor(u => u.Username)<br />
+    @Html.TextBoxFor(u => u.Username)<br />
+    @Html.LabelFor(u => u.Password)<br />
+    @Html.PasswordFor(u => u.Password)<br />
+    @Html.LabelFor(u => u.Email)<br />
+    @Html.TextBoxFor(u => u.Email)<br />
+    @Html.LabelFor(u => u.Name)<br />
+    @Html.TextBoxFor(u => u.Name)<br />
+
+    @Html.LabelFor(u => u.Kode_Perusahaan)<br />
+    @Html.DropDownListFor(u => u.Kode_Perusahaan, (SelectList)ViewBag.Perusahaans, new { @class = "form-control" })<br />
+    @*@Html.DropDownList("Perusahaans","--Pilih Perusahaan--")*@
+    @*@Html.DropDownListFor(model => model.Kode_Perusahaan, new SelectList(
+        new List<Object>{
+             new { value = "A000" , text = "PT Pupuk Indonesia Persero"  },
+             new { value = "B000" , text = "PT Petrokimia Gresik" },
+             new { value = "C000" , text = "PT Pupuk Kujang Cikampek"  },
+             new { value = "D000" , text = "PT Pupuk Sriwidjaja Palembang" },
+             new { value = "E000" , text = "PT Pupuk Kalimantan Timur"},
+             new { value = "F000" , text = "PT Pupuk Iskandar Muda"  }
+          }, "value", "text", 2))*@
+    @Html.ValidationMessageFor(model => model.Kode_Perusahaan) <br />
+
+    @Html.LabelFor(u => u.Kategori)<br />
+    @Html.DropDownListFor(model => model.Kategori, new SelectList(
+                  new List<Object>{
+                       new { value = "1" , text = "Administrator"  },
+                       new { value = "2" , text = "Account Executive" },
+                       new { value = "3" , text = "Assisten Account Executive"  }
+                    }, "value", "text", 2))
+    @Html.ValidationMessageFor(model => model.Kategori) <br />
+    @Html.LabelFor(u => u.Country)<br />
+    @Html.TextBoxFor(u => u.Country)<br />
+    @Html.LabelFor(u => u.Kecamatan)<br />
+    @Html.TextBoxFor(u => u.Kecamatan)<br />
+    @Html.LabelFor(u => u.Telpon)<br />
+    @Html.TextBoxFor(u => u.Telpon)<br />
+    @Html.LabelFor(u => u.Faks)<br />
+    @Html.TextBoxFor(u => u.Faks)<br />
+
+    <p>
+        <button type="submit">Register</button>
+    </p>
+}

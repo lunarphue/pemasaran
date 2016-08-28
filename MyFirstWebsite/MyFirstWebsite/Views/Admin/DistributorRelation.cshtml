@@ -1,0 +1,81 @@
+﻿@model MyFirstWebsite.Models.DistributorAssigns
+@{
+    ViewBag.Title = "DistributorRelation";
+}
+
+<h2>DistributorRelation</h2>
+@Html.ValidationSummary(true)
+
+@using (Html.BeginForm())
+{
+    <table>
+        <tr>
+            <td>@Html.LabelFor(u => u.Kode_Distributor)</td>
+
+            <td colspan="3">@Html.TextBoxFor(u => u.Kode_Distributor) </td>
+        </tr>
+        <tr>
+            <td>@Html.LabelFor(u => u.Id_user) </td>
+
+            <td colspan="3">@Html.TextBoxFor(u => u.Id_user)</td>
+
+        </tr>
+        <tr>
+            <td>
+                @Html.LabelFor(u => u.Urea)
+                <br />
+                @Html.DropDownListFor(u => u.Urea, new SelectList(
+                          new List<Object>{
+                               new { value = "0" , text = "YES"  },
+                               new { value = "1" , text = "NO" }
+                            }, "value", "text", 2))
+                <br />
+            </td>
+            <td>
+                @Html.LabelFor(u => u.NPK)
+                <br />
+                @Html.DropDownListFor(u => u.NPK, new SelectList(
+                          new List<Object>{
+                               new { value = "0" , text = "YES"  },
+                               new { value = "1" , text = "NO" }
+                            }, "value", "text", 2))
+                <br />
+            </td>
+            <td>
+                @Html.LabelFor(u => u.ZA)
+                <br />
+                @Html.DropDownListFor(u => u.ZA, new SelectList(
+                          new List<Object>{
+                               new { value = "0" , text = "YES"  },
+                               new { value = "1" , text = "NO" }
+                            }, "value", "text", 2))
+                <br />
+            </td>
+            <td>
+                @Html.LabelFor(u => u.SP36)
+                <br />
+                @Html.DropDownListFor(u => u.SP36, new SelectList(
+                          new List<Object>{
+                               new { value = "0" , text = "YES"  },
+                               new { value = "1" , text = "NO" }
+                            }, "value", "text", 2))
+                <br />
+            </td>
+            <td>
+                @Html.LabelFor(u => u.Organik)
+                <br />
+                @Html.DropDownListFor(u => u.Organik, new SelectList(
+                          new List<Object>{
+                               new { value = "0" , text = "YES"  },
+                               new { value = "1" , text = "NO" }
+                            }, "value", "text", 2))
+                <br />
+            </td>
+        </tr>
+    </table>
+    <br />
+    <button type="submit">Assign</button>
+
+}
+
+

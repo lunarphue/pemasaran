@@ -1,0 +1,113 @@
+﻿@model MyFirstWebsite.Models.DistributorAssigns
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+
+@using (Html.BeginForm()) 
+{
+    @*@Html.AntiForgeryToken()*@
+    
+    <div class="form-horizontal">
+        <h4>DistributorAssign</h4>
+        <hr />
+        @Html.ValidationSummary(true)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Id_User, "Id_User", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Id_User", String.Empty)
+                @Html.ValidationMessageFor(model => model.Id_User)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Aktif, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Aktif)
+                @Html.ValidationMessageFor(model => model.Aktif)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Kode_Distributor, "Kode_Distributor", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("Kode_Distributor", String.Empty)
+                @Html.ValidationMessageFor(model => model.Kode_Distributor)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Date_Edited, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Date_Edited)
+                @Html.ValidationMessageFor(model => model.Date_Edited)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Time_Edited, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Time_Edited)
+                @Html.ValidationMessageFor(model => model.Time_Edited)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Urea, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Urea)
+                @Html.ValidationMessageFor(model => model.Urea)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NPK, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.NPK)
+                @Html.ValidationMessageFor(model => model.NPK)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.SP36, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SP36)
+                @Html.ValidationMessageFor(model => model.SP36)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.ZA, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ZA)
+                @Html.ValidationMessageFor(model => model.ZA)
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Organik, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Organik)
+                @Html.ValidationMessageFor(model => model.Organik)
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
