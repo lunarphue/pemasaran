@@ -213,3 +213,4 @@ C:\Users\ARDI-PC\Documents\Visual Studio 2015\Projects\pemasaran\MyFirstWebsite\
 C:\Users\ARDI-PC\Documents\Visual Studio 2015\Projects\pemasaran\MyFirstWebsite\MyFirstWebsite\bin\System.Web.Mvc.xml
 C:\Users\ARDI-PC\Documents\Visual Studio 2015\Projects\pemasaran\MyFirstWebsite\MyFirstWebsite\obj\Debug\MyFirstWebsite.dll
 C:\Users\ARDI-PC\Documents\Visual Studio 2015\Projects\pemasaran\MyFirstWebsite\MyFirstWebsite\obj\Debug\MyFirstWebsite.pdb
+C:\Users\ARDI-PC\Documents\Visual Studio 2015\Projects\pemasaran\MyFirstWebsite\MyFirstWebsite\obj\Debug\MyFirstWebsite.csprojResolveAssemblyReference.cache
